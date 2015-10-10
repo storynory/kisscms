@@ -1,0 +1,1886 @@
+@import "vars.less";
+@import "kiss/normalize.less";
+@import "kiss/obj/reset.less";
+@import "kiss/obj/grids.less";
+@import "kiss/obj/forms.less";
+@import "kiss/obj/typography.less";
+@import "kiss/opin/type/sixteen-24.less";
+@import "kiss/obj/mods.less";
+@import "kiss/obj/boxes.less";
+@import "kiss/obj/buttons.less";
+@import "kiss/obj/layout.less";
+@import "kiss/style/colors.less";
+@import "kiss/obj/navs.less";
+@import "kiss/obj/shapes.less";
+@import "kiss/obj/navs.less";
+@import "kiss/obj/fonts.less";
+@import "kiss/obj/lists.less";
+
+
+
+/************************************************************
+Type
+**********************************************************/
+body {
+//font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.baseline{
+    .mu-overlay(@baseline : 12px);
+}
+
+
+.typecheck {
+  .type-check ();
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.font-normal {
+  font-size: normal;
+}
+
+
+
+/* ==========================================================================
+   Floats
+   ========================================================================== */
+
+.left,
+.img-left
+ {
+  float: left;
+}
+
+.right,
+.img-right
+
+ {
+  float: right;
+}
+
+/* ==========================================================================
+   Position
+   ========================================================================== */
+
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.pin {
+ width: auto;
+  height: auto;
+}
+
+.pin,
+.pos-top,
+.abs-top {
+  top: 0;
+}
+
+.pin
+.pos-left,
+.abs-left {
+  left: 0;
+}
+
+.pin,
+.abs-right {
+  right: 0;
+}
+
+.pin,
+.abs-bottom {
+  bottom: 0;
+}
+
+
+
+.away {
+  left: -2000px;
+  top: -2000px;
+}
+
+
+
+
+/* ==========================================================================
+  Grid
+   ========================================================================== */
+
+.kiss-obj-grids-pure-grid ();
+
+.page,
+.cf,
+.grid
+ {
+  .kiss-obj-layout-clearfix () ;
+}
+
+
+.clear-left {
+  clear: left;
+}
+
+
+.height-full {
+height: 100%;
+margin: auto;
+}
+
+
+
+
+.fh {
+height: 100vh;
+width: 400px;
+position: fixed;
+top: 0;
+left: 0;
+overflow-y: scroll;
+}
+
+
+
+/* ==========================================================================
+  Fixed Widths
+   ========================================================================== */
+.width-100 {
+  width: 100px
+}
+
+.width-150 {
+  width: 150px
+}
+
+.width-200 {
+  width: 200px
+}
+
+.width-240 {
+  width: 240px;
+}
+
+.width-250 {
+  width: 250px
+}
+
+
+.width-300 {
+  width: 300px
+}
+
+.width-350 {
+  width: 350px
+}
+
+.width-360 {
+  width: 360px
+}
+
+.width-400 {
+  width: 400px
+}
+
+.width-450 {
+  width: 450px
+}
+
+.width-500 {
+  width: 500px
+}
+
+.width-600 {
+  width: 600px
+}
+
+
+.width-774 {
+  width: 794px
+}
+
+
+
+
+
+/* ==========================================================================
+  Break Points and Responsiveness
+   ========================================================================== */
+
+
+.img-r {
+  margin: auto;
+
+}
+
+
+
+.one-into-tab-large-half,
+.one-into-desk-half,
+.one-into-desk-large-half,
+.one-into-tab-large-third,
+.one-into-desk-third,
+.one-into-desk-large-third,
+.one-into-tab-large-quarter,
+.one-into-desk-quarter,
+.one-into-desk-large-quarter,
+.one-into-tab-large-fifth,
+.one-into-desk-fifth,
+.one-into-desk-large-fifth,
+
+ {
+  width : 100%;
+}
+
+
+.one-half-fixed {
+  width: 50%;
+}
+
+@media ( max-width: @desk-start) {
+
+  .width-r-720 {   // good for responsive media
+  max-width: @tab-large-start;
+}
+
+}
+
+
+@media (min-width: @tab-large-start )   {
+
+
+
+
+  .kiss-obj-grids-fractions ();
+    /* the grid is 100% width on mobile / small tab */
+
+
+
+
+         .one-into-tab-large-half {
+          width : 50%;
+      }
+
+        .one-into-tab-large-third {
+          width : 33.33%;
+      }
+
+      .one-into-tab-large-quarter {
+          width : 25%;
+      }
+
+      .one-into-tab-large-fifth {
+          width : 20%;
+      }
+
+  }
+
+  @media (min-width: @desk-start)   {
+
+
+
+
+         .one-into-desk-half {
+          width : 50%;
+      }
+
+        .one-into-desk-third {
+          width : 33.33%;
+      }
+
+        .one-into-desk-quarter {
+          width : 25%;
+      }
+
+        .one-into-desk-fifth {
+          width : 20%;
+      }
+
+
+  }
+
+    @media (min-width: @desk-large-start)   {
+         .one-into-desk-large-half {
+          width : 50%;
+      }
+
+        .one-into-desk-large-third {
+          width : 33.33%;
+      }
+
+        .one-into-desk-large-quarter {
+          width : 25%;
+      }
+
+        .one-into-desk-large-fifth {
+          width : 20%;
+      }
+
+
+  }
+
+/* ==========================================================================
+   pulls
+   ========================================================================== */
+
+   .pull-left-175 {
+    margin-left: -175px;
+   }
+
+    .pull-left-250 {
+    margin-left: -250px;
+   }
+
+
+    .pull-left-300 {
+    margin-left: -300px;
+   }
+
+
+
+
+/* ==========================================================================
+   Full Widths and centered blocks
+   ========================================================================== */
+.one-whole,
+.full,
+.block,
+.row,
+.stacked,
+.bleed,
+
+.grid,
+header,
+footer
+ {
+  width: 100%;
+}
+
+
+
+.page
+ {
+  max-width: 900px;
+
+}
+
+.stretch,
+.over-hidden,
+.media,
+.media_item
+  {
+ overflow: hidden;
+
+}
+
+
+.stretch {
+  overflow: hidden !important;
+  display: block !important;
+  float: none !important;
+
+}
+
+.stretch {
+  width: auto;
+}
+
+
+.center,
+.grid,
+.page {
+  margin: auto;
+}
+
+
+
+/* ==========================================================================
+   Display
+   ========================================================================== */
+.disp,
+.disp-block {  display: block; }
+.disp-none {  display: none; }
+.disp-inline {  display: inline; }
+.disp-inline-b { display: inline-block; }
+
+/* ==========================================================================
+   Opacity
+   ========================================================================== */
+
+.op-0 {  opacity: 0; }
+.op-1 {  opacity: 1; }
+.op-2 {  opacity: 0.2; }
+.op-4 {  opacity: 0.4; }
+.op-6 {  opacity: 0.6; }
+.op-8 {  opacity: 0.8; }
+.op-10 { opacity: 1; }
+
+
+
+
+
+/* ==========================================================================
+   lists
+   ========================================================================== */
+
+.list-left > li  {
+    float: left
+}
+
+.list-right > li  {
+    float: right
+}
+
+.list-center ul { list-style: none; position: relative; float: left; display: block; left: 50%; }
+.list-center ul li { position: relative; float: left; display: block; right: 50%; }
+
+.list-bare,
+.nav ul {
+    list-style: none;
+  }
+
+.list-compact li {
+    margin: 0;
+    padding: 0;
+  }
+
+
+   .count {
+        counter-reset: my-counter;
+        list-style: none;
+
+
+    }
+
+    .count__u:before {
+      content: counter(my-counter);
+      counter-increment: my-counter;
+      line-height: 1;
+      font-size: inherit;
+      display: inline-block;
+
+
+    }
+
+
+/* ==========================================================================
+   Boxes
+   ========================================================================== */
+
+
+.box,
+.box-top,
+.box-top-bot,
+.box-wide,
+.box-mini-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit, @border: @border);
+}
+
+
+.box,
+.box-bottom,
+.box-wide,
+.box-top-bot,
+.box-mini-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit, @border: @border);
+}
+
+.box,
+.box-right,
+.box-tall,
+.box-left-right,
+.box-mini-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit, @border: @border);
+}
+
+.box,
+.box-left,
+.box-tall,
+.box-left-right,
+.box-mini-wide
+{
+
+.kiss-obj-boxes-box-left (@pad: @unit, @border: @border);
+}
+
+
+// box-mini
+
+.box-mini,
+.box-mini-top,
+.box-mini-wide,
+.box-mini-top-bot,
+.box-tiny-tall
+
+ {
+.kiss-obj-boxes-box-top (@pad: @unit / 2, @border: @border);
+}
+
+
+.box-mini,
+.box-mini-bottom,
+.box-mini-wide,
+.box-mini-top-bot,
+.box-tiny-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit / 2, @border: @border);
+}
+
+.box-mini,
+.box-mini-right,
+.box-mini-tall,
+.box-mini-left-right,
+.box-tiny-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit / 2, @border: @border);
+}
+
+.box-mini,
+.box-mini-left,
+.box-mini-tall,
+.box-mini-left-right,
+.box-tiny-wide
+ {
+.kiss-obj-boxes-box-left (@pad: @unit / 2, @border: @border);
+}
+
+// box tiny
+
+
+.box-tiny,
+.box-tiny-wide,
+.box-tiny-top,
+.box-tiny-top-bot
+ {
+.kiss-obj-boxes-box-top (@pad: @unit / 4, @border: @border);
+}
+
+
+.box-tiny,
+.box-tiny-wide,
+.box-tiny-bottom,
+.box-tiny-top-bot
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit / 4, @border: @border);
+}
+
+.box-tiny,
+.box-tiny-tall,
+.box-tiny-right,
+.box-tiny-left-right
+ {
+.kiss-obj-boxes-box-right (@pad: @unit / 4, @border: @border);
+}
+
+.box-tiny,
+.box-tiny-tall,
+.box-tiny-left,
+.box-tiny-left-right
+ {
+.kiss-obj-boxes-box-left (@pad: @unit / 4, @border: @border);
+}
+
+
+// box-big
+
+.box-big,
+.box-big-top,
+.box-big-wide,
+.box-big-top-bot,
+.box-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit * 2, @border: @border);
+}
+
+
+.box-big,
+.box-big-bottom,
+.box-big-wide,
+.box-big-top-bot,
+.box-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit * 2, @border: @border);
+}
+
+.box-big,
+.box-big-right,
+.box-big-tall,
+.box-big-left-right,
+.box-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit * 2, @border: @border);
+}
+
+.box-big,
+.box-big-left,
+.box-big-tall,
+.box-big-left-right,
+.box-wide
+ {
+.kiss-obj-boxes-box-left (@pad: @unit * 2, @border: @border);
+}
+
+// box-huge
+
+.box-huge,
+.box-huge-top,
+.box-huge-top-bot,
+.box-big-tall
+ {
+  .kiss-obj-boxes-box-top (@pad: @unit * 4, @border: @border);
+}
+
+.box-huge,
+.box-huge-bottom,
+.box-huge-top-bot,
+.box-big-tall
+ {
+  .kiss-obj-boxes-box-bottom (@pad: @unit * 4, @border: @border);
+}
+
+.box-huge,
+.box-huge-left,
+.box-huge-left-right,
+.box-big-wide
+ {
+  .kiss-obj-boxes-box-left (@pad: @unit * 4, @border: @border);
+}
+
+.box-huge,
+.box-huge-right,
+.box-huge-left-right,
+.box-big-wide
+ {
+  .kiss-obj-boxes-box-right (@pad: @unit * 4, @border: @border);
+}
+
+
+.box-huge-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit * 8, @border: @border);
+.kiss-obj-boxes-box-bottom (@pad: @unit * 8, @border: @border);
+}
+
+
+.box-huge-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit * 8, @border: @border);
+.kiss-obj-boxes-box-left (@pad: @unit * 8, @border: @border);
+}
+
+
+
+
+
+/* ==========================================================================
+   Box-thick
+   ========================================================================== */
+
+.box-thick,
+.box-thick-top,
+.box-thick-top-bot,
+.box-thick-wide,
+.box-mini-thick-thick-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit, @border: @border-thick);
+}
+
+
+.box-thick,
+.box-thick-bottom,
+.box-thick-wide,
+.box-thick-top-bot,
+.box-mini-thick-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit, @border: @border-thick);
+}
+
+.box-thick,
+.box-thick-right,
+.box-thick-tall,
+.box-thick-left-right,
+.box-mini-thick-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit, @border: @border-thick);
+}
+
+.box-thick,
+.box-thick-left,
+.box-thick-tall,
+.box-thick-left-right,
+.box-thick-top-bot,
+.box-mini-thick-wide
+{
+
+.kiss-obj-boxes-box-left (@pad: @unit, @border: @border-thick);
+}
+
+
+// box-mini
+
+.box-mini-thick,
+.box-mini-thick-top,
+.box-mini-thick-wide,
+.box-mini-thick-top-bot,
+.box-tiny-thick-tall
+
+ {
+.kiss-obj-boxes-box-top (@pad: @unit / 2, @border: @border-thick);
+}
+
+
+.box-mini-thick,
+.box-mini-thick-bottom,
+.box-mini-thick-wide,
+.box-mini-thick-top-bot,
+.box-tiny-thick-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit / 2, @border: @border-thick);
+}
+
+.box-mini-thick,
+.box-mini-thick-right,
+.box-mini-thick-tall,
+.box-mini-thick-left-right,
+.box-tiny-thick-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit / 2, @border: @border-thick);
+}
+
+.box-mini-thick,
+.box-mini-thick-left,
+.box-mini-thick-tall,
+.box-mini-thick-left-right,
+.box-tiny-thick-wide
+ {
+.kiss-obj-boxes-box-left (@pad: @unit / 2, @border: @border-thick);
+}
+
+// box tiny
+
+
+.box-tiny-thick,
+.box-tiny-thick-wide,
+.box-tiny-thick-top,
+.box-tiny-thick-top-bot
+ {
+.kiss-obj-boxes-box-top (@pad: @unit / 4, @border: @border-thick);
+}
+
+
+.box-tiny-thick,
+.box-tiny-thick-wide,
+.box-tiny-thick-bottom,
+.box-tiny-thick-top-bot
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit / 4, @border: @border-thick);
+}
+
+.box-tiny-thick,
+.box-tiny-thick-tall,
+.box-tiny-thick-right,
+.box-tiny-thick-left-right
+ {
+.kiss-obj-boxes-box-right (@pad: @unit / 4, @border: @border-thick);
+}
+
+.box-tiny-thick,
+.box-tiny-thick-tall,
+.box-tiny-thick-left,
+.box-tiny-thick-left-right
+ {
+.kiss-obj-boxes-box-left (@pad: @unit / 4, @border: @border-thick);
+}
+
+
+// box-big
+
+.box-big-thick,
+.box-big-thick-top,
+.box-big-thick-wide,
+.box-big-thick-top-bot,
+.box-thick-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit * 2, @border: @border-thick);
+}
+
+
+.box-big-thick,
+.box-big-thick-bottom,
+.box-big-thick-wide,
+.box-big-thick-top-bot,
+.box-thick-tall
+ {
+.kiss-obj-boxes-box-bottom (@pad: @unit * 2, @border: @border-thick);
+}
+
+.box-big-thick,
+.box-big-thick-right,
+.box-big-thick-tall,
+.box-big-thick-left-right,
+.box-thick-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit * 2, @border: @border-thick);
+}
+
+.box-big-thick,
+.box-big-thick-left,
+.box-big-thick-tall,
+.box-big-thick-left-right,
+.box-thick-wide
+ {
+.kiss-obj-boxes-box-left (@pad: @unit * 2, @border: @border-thick);
+}
+
+// box-huge
+
+.box-huge-thick,
+.box-huge-thick-top,
+.box-huge-thick-top-bot,
+.box-big-thick-tall
+ {
+  .kiss-obj-boxes-box-top (@pad: @unit * 4, @border: @border-thick);
+}
+
+.box-huge-thick,
+.box-huge-thick-bottom,
+.box-huge-thick-top-bot,
+.box-big-thick-tall
+ {
+  .kiss-obj-boxes-box-bottom (@pad: @unit * 4, @border: @border-thick);
+}
+
+.box-huge-thick,
+.box-huge-thick-left,
+.box-huge-thick-left-right,
+.box-big-thick-wide
+ {
+  .kiss-obj-boxes-box-left (@pad: @unit * 4, @border: @border-thick);
+}
+
+.box-huge-thick,
+.box-huge-thick-right,
+.box-huge-thick-left-right,
+.box-big-thick-wide
+ {
+  .kiss-obj-boxes-box-right (@pad: @unit * 4, @border: @border-thick);
+}
+
+
+.box-huge-thick-tall
+ {
+.kiss-obj-boxes-box-top (@pad: @unit * 8, @border: @border-thick);
+.kiss-obj-boxes-box-bottom (@pad: @unit * 8, @border: @border-thick);
+}
+
+
+.box-huge-thick-wide
+ {
+.kiss-obj-boxes-box-right (@pad: @unit * 8, @border: @border-thick);
+.kiss-obj-boxes-box-left (@pad: @unit * 8, @border: @border-thick);
+}
+
+
+
+/* ==========================================================================
+   Flush
+   ========================================================================== */
+.box-flush {
+  border : 1px solid transparent;
+  //box-sizing: content-box;
+  padding-bottom: ( @unit / 2 ) - 2 * 1px;
+
+}
+
+
+
+.box--flush-left,
+.box--flush-left-right
+
+ {
+  padding-left: 0;
+  border-left: none;
+}
+
+.box--flush-right,
+.box--flush-left-right
+ {
+  padding-right: 0;
+  border-right: none;
+
+}
+
+
+.box--flush-top,
+.box--flush-top-bot
+ {
+  padding-top: 0;
+  border-top: none;
+}
+
+
+.box--flush-bottom,
+.box--flush-top-bot
+ {
+  padding-bottom: 0;
+  border-bottom: none;
+
+}
+
+
+/* ==========================================================================
+   Borders
+   ========================================================================== */
+
+  .box--no-border {
+    border: none;
+  }
+
+
+.box-border {
+  border : @border * 1px solid transparent;
+  box-sizing: content-box;
+}
+
+.box-tiny--border-top {
+    border-top : @border * 1px solid transparent;
+    padding-bottom: @line / 4 - 1px;
+}
+
+
+.sep-bottom-primary {
+  border-bottom-color : @primary;
+}
+
+
+.pull-out {
+  border-left-width:  5px;
+}
+
+.box--content {
+  box-sizing: content-box;
+}
+
+/* ==========================================================================
+   Space  -
+   ========================================================================== */
+
+
+
+
+.space,
+.space-right,
+.space-left-right
+ {
+  margin-right: @line;
+}
+
+.space-left,
+.space-left-right
+ {
+  margin-left: @line;
+}
+
+
+.space-top,
+.space-top-bottom
+ {
+  margin-top: @line;
+}
+
+.space-bottom,
+.space-top-bottom
+ {
+  margin-bottom: @line;
+}
+
+.space-big-right {
+  margin-right: @line * 2;
+}
+
+.space-top-half,
+.space-top-bottom-half
+ {
+   margin-top: @line / 2;
+}
+
+.space-bottom-half,
+.space-top-bottom-half
+ {
+   margin-bottom: @line / 2;
+}
+
+
+/* ==========================================================================
+Drawer Menu
+   ========================================================================== */
+
+.ham {
+  //.kiss-obj-shapes-ham();  ~
+}
+
+.cross {
+  .kiss-obj-shapes-cross ();
+}
+
+input.drawer + label,
+input.drawer:checked + label {
+top : @line / 2;
+ left : @line / 2;
+
+}
+
+
+
+input.drawer + label  {
+ .kiss-obj-shapes-ham (@stroke : 4px, @width: @line * 1, @color : @accent-dark, @top :  50%);
+
+}
+
+
+input.drawer:checked + label  {
+  .kiss-obj-shapes-cross (@stroke : ( @line / 6) , @size: ( @line * 1 ), @color : @accent-dark, @top : 50%);
+}
+
+
+#drawer.open,
+input.drawer:checked ~ #main {
+
+-webkit-transform: translate(200px,0);
+   -moz-transform: translate(200px,0);
+    -ms-transform: translate(200px,0);
+     -o-transform: translate(200px,0);
+        transform: translate(200px,0);
+
+}
+
+
+/* ==========================================================================
+   Shapes
+   ========================================================================== */
+.carot {
+    .kiss-obj-nav-carot (@carot: '\25BE')
+}
+
+.carrot-up {
+  position: relative;
+  z-index: 100;
+
+
+}
+.carrot-up:after {
+ z-index: -1;
+  content: "▲";
+  position: absolute;
+  font-size: @line;
+  top: @line * -1.75px;
+  right: 0;
+  color: @gray;
+
+}
+
+
+
+
+.arrow-top-right,
+.arrow-top {
+
+border-color: @alt;
+.arrow(@size : 10px, @color : @alt, @direction : top, @offset : 50px, @border-size: 1, @border-color: inherit);
+
+}
+
+.arrow-top-right {
+  &:after, &:before {
+  left: 100%;
+
+
+  }
+
+
+}
+
+.arrow-bottom {
+position: relative;
+.arrow(@size : 15px, @color : @alt, @direction : bottom, @offset : 50%, @border-size: 1, @border-color: inherit);
+
+}
+
+.arrow-left {
+
+border-color: @alt;
+.arrow(@size : 30px, @color : @alt, @direction : left, @offset : 50px, @border-size: 1, @border-color: inherit);
+
+}
+
+
+.arrow-right {
+
+
+.arrow(@size : 30px, @color : @alt, @direction : right, @offset : 50px, @border-size: 1, @border-color: inherit);
+ &:after { border-left-color: @primary-light;} // how to modify
+}
+
+
+
+
+/* ==========================================================================
+   Box Shadows
+   ========================================================================== */
+
+.shadow-one {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+
+.card {
+border: none;
+
+     background: @alt;
+     -webkit-transition: all 250ms;
+      -moz-transition: all 250ms;
+      transition: all 250ms;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      &:hover,&.hover_effect {
+           box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          -webkit-transform: translateY(-5px);
+          -moz-transform: translateY(-5px);
+          transform: translateY(-5px);
+      }
+}
+
+.card-2 {
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.card-3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    }
+
+
+.card-4
+   {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+ .card-5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+.card-3,.card-4,.card-5 {
+  &:hover {
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+}
+
+
+/* ==========================================================================
+   Text Shadows
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Corners
+   ========================================================================== */
+
+.roundish
+ {
+  border-radius: @roundish;
+
+}
+
+.rounded {
+  border-radius: @rounded;
+}
+
+.round {
+  border-radius: @round;
+}
+
+.rounded-top-left,
+.rounded-left {
+ border-top-left-radius: 2em;
+
+}
+
+.rounded-bottom-left,
+.rounded-left {
+ border-bottom-left-radius: 2em;
+
+}
+
+.rounded-top-right,
+.rounded-right {
+ border-top-right-radius: 2em;
+}
+
+.rounded-bottom-right,
+.rounded-right {
+ border-bottom-right-radius: 2em;
+
+}
+
+
+
+/* ==========================================================================
+  Forms
+   ========================================================================== */
+input {
+  line-height: inherit;
+}
+
+
+
+textarea {
+  min-height: @line * 8;
+}
+
+.form-align {
+
+
+  input {
+    width: 100%;
+    line-height: inherit;
+
+  }
+
+
+  label {
+  line-height:  ( (@unit * 3)  - 2 ) * 1px ;
+
+  }
+
+}
+
+  .table-col {
+    display: table-column;
+
+}
+
+
+.form-stacked {
+    .kiss-obj-forms-inputs-stacked ();
+
+    fieldset {
+
+      padding-bottom: 0;
+    }
+
+   .input-text {
+    margin-top: 0px;
+   }
+
+
+
+
+}
+
+
+
+.form-inline{
+
+  input {
+    margin-right: @line / 2;
+  }
+}
+
+
+
+
+ /* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+
+
+.btn {
+  .kiss-obj-buttons-base ();
+  transition: all 0.3s ease 0s;
+
+
+}
+
+
+
+
+.btn--disabled {
+  opacity: 0.8;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+
+
+/* ==========================================================================
+   Drop Downs
+   ========================================================================== */
+
+.drop > ul,
+.drop > .dropdown
+ {
+  position: absolute;
+  top: -2000px;
+  left: -2000px;
+  opacity: 0.2;
+   -moz-transition: opacity 0.3s ease-in-out;
+   -webkit-transition: opacity 0.3s ease-in-out;
+     transition: opacity 0.3s ease-in-out;
+
+
+}
+
+.drop.active > ul,
+.drop.active > .dropdown
+
+ {
+position: absolute;
+  opacity: 1;
+  top: auto;
+  left: auto;
+  z-index: 100;
+
+
+}
+
+
+
+/* ==========================================================================
+   Icons
+   ========================================================================== */
+
+.icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: normal;
+  line-height: 1;
+  vertical-align: bottom;
+  letter-spacing: normal;
+  text-transform: none;
+ display: inline-block;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.play-pause:before {
+  content: "\e037";
+}
+
+.btn:hover .play-pause:before,
+.btn:focus .play-pause:before,
+.btn:active .play-pause:before {
+  content: "\e034";
+}
+
+
+/* ==========================================================================
+   Note colors
+   ========================================================================== */
+
+.note-primary,
+{
+  border-color : @primary;
+}
+
+.note-primary-dark,
+ {
+  border-color : @primary-dark;
+}
+
+.note-primary-light,
+ {
+  border-color : @primary-light;
+}
+
+
+.note-alt-dark-top {
+  border-top-color: @alt-dark;
+}
+
+.note-accent-dark-top {
+  border-top-color: @accent-dark;
+}
+
+
+.note-accent-dark-bottom {
+  border-bottom-color: @accent-dark;
+}
+
+
+
+.note-alt,
+.note {
+  border-color : @alt;
+}
+
+.note-alt-dark,
+ {
+  border-color : @alt-dark;
+}
+
+.note-alt-light,
+ {
+  border-color : @alt-light;
+}
+
+.note-accent {
+  border-color : @accent;
+}
+
+.note-accent-dark {
+  border-color : @accent-dark;
+}
+
+.outline-accent-dark {
+  outline: 1px solid @accent-dark;
+}
+
+.note-accent-light {
+  border-color : @accent-light;
+}
+
+textarea{
+  background: #f4f2f0;
+  overflow: scroll;
+}
+
+.note-accent-light {
+  border-color : @accent-light;
+}
+
+.note-gray {
+  border-color: @gray;
+}
+
+.note-gray-dark{
+  border-color : @gray-dark;
+}
+
+.note-black {
+  border-color : @black;
+}
+
+.note-accent-dark-top {
+  border-top-color: @accent-dark;
+}
+
+/* ==========================================================================
+   Background Colors
+   ========================================================================== */
+
+
+
+.gray {
+  background: @gray;
+}
+
+
+
+.gray-dark {
+  background: @gray-dark;
+}
+
+
+.gray-light {
+  background: @gray-light;
+}
+
+
+.primary {
+  background: @primary;
+
+}
+
+.primary-light {
+  background: @primary-light;
+
+}
+
+.primary-dark {
+  background: @primary-dark;
+  .accent {
+    color: @accent-light;
+  }
+
+}
+
+.btn--alt,
+.alt {
+  background: @alt;
+}
+
+
+.alt-light {
+  background: @alt-light;
+}
+
+input.away:active ~ label.btn--alt,
+.btn--alt:active,
+.btn--alt:focus,
+.alt-dark {
+  background: @alt-dark;
+
+}
+
+.success {
+  background: @green;
+}
+
+.alert {
+  background: @red
+}
+
+
+
+.white {
+  background: white;
+}
+
+.muted {
+  background: @muted;
+
+}
+
+
+.muted-light {
+  background: @muted-light;
+  color: white;
+}
+
+.muted-dark {
+  background: @muted-dark;
+  color: white;
+}
+
+.black {
+  background: @black;
+}
+
+.black-dark {
+  background: @black-dark
+}
+
+
+.black-light {
+  background: @primary;
+}
+
+.accent {
+  background: @accent;
+}
+
+.accent-light {
+  background: @accent-light;
+}
+
+.accent-dark {
+  background: @accent-dark;
+}
+
+
+/*
+   Colors - text
+   ========================================================================== */
+.color-primary {
+   color: @primary;
+}
+
+.color-primary-dark {
+  color: @primary-dark;
+}
+
+.color-primary-light {
+  color: @primary-light;
+}
+
+
+.color-alt{
+  color: @alt;
+}
+
+.color-alt-dark {
+  color: @alt-dark;
+}
+
+
+.color-alt-light {
+  color: @alt-light;
+}
+
+
+.color-accent {
+  color: @accent;
+}
+
+
+.color-accent-light {
+  color: @accent-light;
+}
+
+.btn--alt,
+.color-accent-dark {
+  color: @accent-dark;
+}
+
+.color-muted {
+  color: @muted
+}
+
+.color-muted-light {
+  color: @muted-light
+}
+
+.color-muted-dark {
+  color: @muted-dark
+}
+
+.color-white {
+  color: white
+}
+
+.color-black {
+  color: @black;
+}
+
+.color-black-light {
+  color: @black-light;
+}
+
+.color-black-dark {
+  color: @black-dark;
+}
+
+
+.btn--alt:hover {
+  color:  @black-light;
+}
+
+
+/* ==========================================================================
+   Button-states
+   ========================================================================== */
+
+.btn--accent {
+   &:extend(.accent-dark);
+   &:extend(.color-white);
+   &:extend(.note-alt-light);
+
+
+   &:hover,
+   &:active,
+   &:focus
+    {
+     &:extend(.accent-dark);
+     color: @black-light;
+   }
+
+}
+
+.btn.round {
+   &:extend(.card-2);
+}
+
+.btn--ghost {
+     &:extend(.card-2);
+
+      &:hover,
+   &:active,
+   &:focus
+    {
+     &:extend(.accent-dark);
+     color: white;
+   }
+
+}
+
+
+
+/* ==========================================================================
+ overflow and scrolling
+   ========================================================================== */
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.scroll-x {
+   overflow-x: scroll;
+}
+
+.over-hidden {
+  overflow: hidden;
+}
+
+
+
+.lock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+
+}
+
+}
+
+
+
+/* ==========================================================================
+   Transitions
+   ========================================================================== */
+
+.trans-quick {
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+  }
+
+
+
+.trans-medium {
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration:  0.3s;
+  }
+
+
+
+/* ==========================================================================
+   Transform Animations
+   ========================================================================== */
+
+
+.trans-right-100 {
+
+
+   -ms-transform: translate(100%,0); /* IE 9 */
+   -webkit-transform: translate(100%,0); /* Safari */
+    transform: translateX(-50%);
+}
+
+
+.three-d {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+
+  }
+
+
+
+
+
+/* ==========================================================================
+   z index
+   ========================================================================== */
+.front {
+  z-index: 1000;
+}
+
+.middle {
+  z-index: 100;
+}
+
+.back {
+   z-index: -1;
+}
+
+.behind {
+  z-index: -1;
+}
+
+/* ==========================================================================
+
+   ========================================================================== */
+
+
+
+
+.js-drop {
+  position: relative;
+  z-index: 100;
+}
+
+
+.overlay {
+  opacity: 0.2;
+  background: black;
+ z-index: 10;
+
+}
+
+
+.lava-right:after {
+margin-left: 50%;
+ -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration:  0.3s;
+}
+
+.lava:after {
+   content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: @line * 1.75;
+  left: 0;
+  background: @accent;
+}
+
+
+
+.rotate {
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+

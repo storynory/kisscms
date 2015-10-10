@@ -1,0 +1,45 @@
+{
+  "name": "kisscms",
+  "version": "1.0.0",
+  "description": "A node cms with flat file database NEDB, feathers, and riot.js",
+  "main": "app.js",
+  "scripts": {
+    "test": " mocha test/ --timeout 5000 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storynory/kisscms.git"
+  },
+  "keywords": [
+    "cms",
+    "node"
+  ],
+  "author": "Hugh Fraser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/storynory/kisscms/issues"
+  },
+  "homepage": "https://github.com/storynory/kisscms#readme",
+  "dependencies": {
+    "superagent": "latest",
+    "feathers": "latest",
+    "feathers-nedb" : "latest",
+    "body-parser"  : "latest",
+    "superagent" : "latest",
+    "html-entities": "latest"
+ },
+  "devDependencies": {
+    "chai": "latest",
+    "mocha": "latest",
+    "supertest": "latest",
+    "less": "latest",
+    "clean-css" : "latest",
+    "stylestats" : "latest",
+    "watch": "latest",
+    "parallelshell": "latest",
+    "riot": "latest",
+    "browserify" : "latest",
+    "uglify-js" : "latest"
+
+  }
+}
