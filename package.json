@@ -26,7 +26,8 @@
     "feathers-nedb" : "latest",
     "body-parser"  : "latest",
     "superagent" : "latest",
-    "html-entities": "latest"
+    "html-entities": "latest",
+    "async": "latest"
  },
   "devDependencies": {
     "chai": "latest",
