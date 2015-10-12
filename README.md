@@ -9,7 +9,7 @@ I personally like riot.js but it should be easy to swap this for React or Handle
 My ambition is to make this a CMS - in other words a skeleton app that can easily be adapted, extended,
 templated. Although this plan sounds grandiose, I actually think its quite possible because there are so many great frameworks on NPM that you can build on. It's more about getting the best architecture and stringing all the bits and pieces together the right way. I'm trying to write as little code as possible.
 
-In the process of doing this, I'm going to  think  how it to make it wasy to swap out each part.  The architecture  has to make it  simple to add to or change the routes,  or swap out the front end theme, use any template system or framework, add fields to the API and modify the back-end screens.   There need to be helper functions, good docs, and a shortish config file with a few variables (such as the theme name).
+In the process of doing this, I'm going to  think  how it to make it wasy to swap out each part.  The architecture  has to make it  simple to add to or change the routes,  or swap out the front end theme, use any template system or framework, add fields to the API, create "custom posts", and modify the back-end screens.   There need to be helper functions, good docs, and a shortish config file with a few variables (such as the theme name).
 
 For image handling, I'm planning to use Pica.js which will resize images in the browser ultra fast.
 
