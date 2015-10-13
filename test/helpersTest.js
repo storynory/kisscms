@@ -1,7 +1,8 @@
 var should = require( 'chai' )
   .should(),
   request = require( "superagent" ),
-  helpers = require( "../helpers/helpers.js" )
+  helpers = require( "../helpers/helpers.js" ),
+  fetch = require( "../helpers/fetchApi.js" )
 
 describe( 'test suite for helpers', function ( done ) {
   before( function ( done ) {
@@ -19,23 +20,29 @@ describe( 'test suite for helpers', function ( done ) {
     } );
   } );
 
-  describe( 'checkUniqueSlug is true', function () {
-    it( 'should return true to show that slug  is unique and does not exist already', function ( done ) {
-      var slug = "minnie-is-a-super-nice-cat";
-      var unique = helpers.checkUniqueSlug( slug );
-      unique.should.equal( true );
+  describe( 'Post Exists', function () {
+    it( 'should return 201 to show post already exists in api', function ( done ) {
+      var api = "http://localhost:8080/api/posts/?slug=Minnie",
+        callback = function ( template, result, res, status ) {
+          status.should.equal( 201 );
+          done();
 
-      done();
+        }
+      fetch.apiCall( callback, api )
+
     } );
   } );
 
-  describe( 'checkUniqueSlug is false', function () {
-    it( 'should return false to show that slug is NOT unique and exists already', function ( done ) {
-      var slug = "Minnie";
-      var unique = helpers.checkUniqueSlug( slug );
-      unique.should.equal( false );
+  describe( 'Post Exists', function () {
+    it( 'should return 404 to show post does NOT exist in api', function ( done ) {
+      var api = "http://localhost:8080/api/posts/?slug=Minn",
+        callback = function ( template, result, res, status ) {
+          status.should.equal( 404 );
+          done();
 
-      done();
+        }
+      fetch.apiCall( callback, api )
+
     } );
   } );
 

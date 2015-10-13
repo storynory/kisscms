@@ -14,7 +14,7 @@ describe( 'test suite for posts api', function () {
         .post( posts )
         .send( {
           slug: 'Minnie',
-          species: 'bitch'
+          species: 'black dog'
         } )
         .end( function ( err, result ) {
           post_id = result.body._id;

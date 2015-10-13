@@ -3,7 +3,7 @@ exports.post = function ( req, res ) {
     api = "http://localhost:8080/api/posts/?slug=" + req.url.slice( 1 ),
     template = '../views/templates/page.tag'
 
-  controller.apiCall( req, res, api, template, controller.sendRiot )
+  controller.apiCall( controller.sendRiot, api, res, template )
 
 };
 
@@ -12,6 +12,6 @@ exports.posts = function ( req, res ) {
     api = "http://localhost:8080/api/posts/?slug=" + req.url.slice( 1 ),
     template = '../views/templates/posts.tag'
 
-  controller.apiCall( req, res, api, template, controller.sendRiot )
+  controller.apiCall( res, api, template, controller.sendRiot )
 
 };

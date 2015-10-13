@@ -1,14 +1,14 @@
 var exports = module.exports = {};
 
-exports.apiCall = function ( req, res, api, template, callback ) {
+exports.apiCall = function ( callback, api, res, template ) {
   request = require( 'superagent' ),
   request.get( api )
     .end( function ( err, result ) {
       if ( result && typeof result.body[ 0 ] !== 'undefined' && result.body[ 0 ] !== null ) {
-        callback( template, result.body[ 0 ], res, 201 )
+        callback( template, result.body, res, 201 )
       } else {
 
-        callback( template, result.body[ 0 ], res, 404 )
+        callback( template, undefined, res, 404 )
 
       }
 
@@ -28,7 +28,7 @@ exports.sendRiot = function ( template, result, res, status ) {
       entities = new Entities(),
 
       html = riot.render( postView, {
-        posts: result
+        posts: result[ 0 ]
       } );
     html = entities.decode( html )
     res.send( "<!doctype html>" + html );
