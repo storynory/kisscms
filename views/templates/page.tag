@@ -3,7 +3,7 @@
     <head></head>
     <body class="alt">
          <div class="page white box-huge-bottom cf">
-            <h1>{ opts.posts.name } is a { opts.posts.species } </h1>
+            <h1>{ opts.posts.slug } is a { opts.posts.species } </h1>
         </div>
 
 
