@@ -21,16 +21,18 @@ var app = feathers()
 
 // Connect to the db, create and register a Feathers service.
 
-// app.use(express.static('public'));
+app.use( feathers.static( 'views/public' ) );
 
 app.use( 'api/posts', new nedbService( 'posts' ) );
 app.use( 'api/tags', new nedbService( 'tags' ) );
 app.use( 'api/users', new nedbService( 'users' ) );
 
-router.use( '/post/', require( './routes/postRoute' )
+router.use( '/post/', require( './routes/publicRoutes' )
   .post );
-router.use( '/posts/', require( './routes/postRoute' )
+router.use( '/posts/', require( './routes/publicRoutes' )
   .posts );
+router.use( '/admin/newpost', require( './routes/adminRoutes' )
+  .newpost );
 
 app.use( '/', router );
 

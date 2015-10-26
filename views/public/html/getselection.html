@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .highlight {color: red; }
+    </style>
+    <script>
+        function highlight() {
+            var text, sel, range;
+            if (window.getSelection) {
+                text = window.getSelection().toString();
+                sel = window.getSelection();
+                if (sel.rangeCount) {
+                    range = sel.getRangeAt(0);
+                    range.deleteContents();
+                    range.insertNode(range.createContextualFragment('<span class="highlight">'+text+'</span>'));
+                }
+            } else if (document.selection && document.selection.createRange) {
+                text = document.selection.createRange().text;
+                range = document.selection.createRange();
+                range.innerHTML = '<span class="highlight">'+text+'</span>';
+            }
+        }
+    </script>
+</head>
+
+<body>
+<p>lorem ipsum donor kebab it is for the best.  It is for the worst. It is need to go to sleep best worst.</p>
+<button onclick="highlight()">Click me</button>
+</body>
+</html>

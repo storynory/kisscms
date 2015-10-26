@@ -4,7 +4,13 @@
   "description": "A node cms with flat file database NEDB, feathers, and riot.js",
   "main": "app.js",
   "scripts": {
-    "test": " mocha test/ --timeout 5000 "
+    "test": " mocha test/ --timeout 5000 ",
+    "watchapp": "nodemon -e js,tag,css",
+    "riot:js": "riot  views/tags  views/public/js/tags.js",
+    "postriot:js": "browserify views/public/js/bundle.js > views/public/js/riotscripts.js",
+    "build:less": "lessc views/less/styles.less > views/public/css/styles.css",
+    "watch:less": " watch 'npm run build:less' "
+
   },
   "repository": {
     "type": "git",
@@ -23,24 +29,24 @@
   "dependencies": {
     "superagent": "latest",
     "feathers": "latest",
-    "feathers-nedb" : "latest",
-    "body-parser"  : "latest",
-    "superagent" : "latest",
+    "feathers-nedb": "latest",
+    "body-parser": "latest",
+    "superagent": "latest",
     "html-entities": "latest",
-    "async": "latest"
- },
+    "async": "latest",
+    "riot": "latest"
+  },
   "devDependencies": {
     "chai": "latest",
     "mocha": "latest",
     "supertest": "latest",
     "less": "latest",
-    "clean-css" : "latest",
-    "stylestats" : "latest",
+    "clean-css": "latest",
+    "stylestats": "latest",
     "watch": "latest",
     "parallelshell": "latest",
-    "riot": "latest",
-    "browserify" : "latest",
-    "uglify-js" : "latest"
+    "browserify": "latest",
+    "uglify-js": "latest"
 
   }
 }
